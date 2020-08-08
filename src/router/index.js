@@ -14,6 +14,8 @@ import jiangzuo from '../views/jiangzuo.vue'
 import gongcheng from '../views/gongcheng.vue'
 import jidian from '../views/jidian.vue'
 import shoujian from '../views/shoujian.vue'
+import shuxiang from '../views/shuxiang.vue'
+import jiangtan from '../views/jiangtan.vue'
 
 Vue.use(VueRouter)
 
@@ -90,7 +92,18 @@ Vue.use(VueRouter)
     name: 'shoujian',
     component: shoujian
   }
-  
+  ,
+  {
+    path: '/shuxiang',
+    name: 'shuxiang',
+    component: shuxiang
+  }
+  ,
+  {
+    path: '/jiangtan',
+    name: 'jiangtan',
+    component: jiangtan
+  }
 ]
 
 const router = new VueRouter({

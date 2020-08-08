@@ -1,54 +1,48 @@
 <template>
   <div>
-    <header style="position: fixed;top:0;">
-      <div>
-        <img src="../../public/shouye/shouye1.png" />
+    <div class="shuxiang">
+      <div style="margin-left:10px;">
+        <router-link to="/">
+          <van-icon name="arrow-left" size="30px" color="#2c3e50"/>
+        </router-link>
       </div>
-      <div>
-        <van-dropdown-menu style="width:200px;border:none;box-shadow: 0 0 0px;">
-          <van-dropdown-item v-model="value1" :options="option1" />
-        </van-dropdown-menu>
-      </div>
-      <div>
-        <img src="../../public/shouye/shouye2.png" />
-      </div>
-    </header>
-    <div style="height:60px;"></div>
+      <div style="margin-top:0px;margin-left:100px;">书香战“疫”</div>
+    </div>
     <section>
-      <div>
+      <div class="shuxiang1" >
         <van-search v-model="value" placeholder="搜索" />
       </div>
       <ul class="flex body_one">
         <router-link to="/wodekecheng">
           <li>
             <p>
-              <img src="../../public/shouye/shouye3.jpg" />
+              <img src="../../public/shouye/shuxiang1.jpg" />
             </p>
-            <p style="color:#2c3e50;">我的课堂</p>
+            <p style="color:#2c3e50;">问卷调查</p>
           </li>
         </router-link>
         <router-link to="/wodexiaozu">
         <li>
           <p>
-            <img src="../../public/shouye/shouye4.jpg" />
+            <img src="../../public/shouye/shuxiang2.jpg" />
           </p>
-          <p style="color:#2c3e50;">我的小组</p>
+          <p style="color:#2c3e50;">成果荟萃</p>
         </li>
         </router-link>
          <router-link to="/qikan">
         <li>
           <p>
-            <img src="../../public/shouye/shouye5.jpg" />
+            <img src="../../public/shouye/shuxiang3.jpg" />
           </p>
-          <p  style="color:#2c3e50;">期刊</p>
+          <p  style="color:#2c3e50;">馆员获奖名单</p>
         </li>
         </router-link>
         <router-link to="/tushu">
         <li>
           <p>
-            <img src="../../public/shouye/shouye6.jpg" />
+            <img src="../../public/shouye/shuxiang4.jpg" />
           </p>
-          <p style="color:#2c3e50;">图书</p>
+          <p style="color:#2c3e50;">师生获奖名单</p>
         </li>
         </router-link>
       </ul>
@@ -56,49 +50,48 @@
         <router-link to="/baozhi">
         <li>
           <p>
-            <img src="../../public/shouye/shouye7.jpg" />
+            <img src="../../public/shouye/shuxiang5.jpg" />
           </p>
-          <p style="color:#2c3e50;">报纸</p>
+          <p style="color:#2c3e50;">答题战“疫”</p>
         </li>
         </router-link>
         <router-link to="/jiangzuo">
         <li>
           <p>
-            <img src="../../public/shouye/shouye8.jpg" />
+            <img src="../../public/shouye/shuxiang6.jpg" />
           </p>
-          <p  style="color:#2c3e50;">讲座</p>
+          <p  style="color:#2c3e50;">活动手册</p>
         </li>
         </router-link>
-         <router-link to="/gongcheng">
-        <li>
-          <p>
-            <img src="../../public/shouye/shouye9.jpg" />
-          </p>
-          <p style="color:#2c3e50;">汽车工程</p>
-        </li>
+         <router-link to="/jiangtan">
+            <li>
+              <p>
+                <img src="../../public/shouye/shuxiang7.jpg" />
+              </p>
+              <p style="color:#2c3e50;">名师讲坛</p>
+            </li>
         </router-link>
          <router-link to="/jidian">
         <li>
           <p>
-            <img src="../../public/shouye/shouye10.jpg" />
+            <img src="../../public/shouye/shuxiang8.jpg" />
           </p>
-          <p style="color:#2c3e50;">机电工程</p>
+          <p style="color:#2c3e50;">移动的图书馆</p>
         </li>
         </router-link>
       </ul>
-      <ul class="flex body_one">
-        <router-link to="/shuxiang">
-        <li style="width:93px;">
-          <p>
-            <img src="../../public/shouye/shouye11.jpg" />
-          </p>
-          <p>书香战“疫”</p>
-        </li>
-        </router-link>
-
-      </ul>
-      <div style="margin-top:10px;">
-        <img src="../../public/shouye/shouye12.jpg" width="100%" />
+      <div style="margin-top:20px;">
+        <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
+          <van-swipe-item>            
+            <img src="../../public/shouye/shuxiang9.jpg" width="100%"/>
+          </van-swipe-item>
+          <van-swipe-item>            
+            <img src="../../public/shouye/shuxiang10.jpg" width="100%"/>
+          </van-swipe-item>
+          <van-swipe-item>            
+            <img src="../../public/shouye/shuxiang11.jpg" width="100%"/>
+          </van-swipe-item>
+        </van-swipe>
       </div>
     </section>
     <footer>
@@ -164,25 +157,33 @@ export default {
 };
 </script>
 
-<style >
-header {
+<style scoped>
+  .my-swipe .van-swipe-item {
+    color: #fff;
+    font-size: 20px;
+    /* line-height: 100px; */
+    text-align: center;
+    background-color: #39a9ed;
+  }
+.shuxiang {
   display: flex;
   height: 60px;
   width: 100%;
   background: white;
   z-index: 3;
+  line-height: 60px;
 }
-header img {
+.shuxiang img {
   width: 40%;
 }
-header > div {
-  flex: 1;
+.shuxiang > div {
+  /* flex: 1; */
   margin-top: 10px;
 }
-header > img:nth-child(1) {
+.shuxiang > img:nth-child(1) {
   text-align: left;
 }
-header > img:nth-child(3) {
+.shuxiang > img:nth-child(3) {
   right: 0;
 }
 .van-dropdown-menu__bar {
@@ -199,5 +200,9 @@ header > img:nth-child(3) {
 }
 .body_one li {
   text-align: center;
+}
+.shuxiang1{
+  background: #90b6e7;
+  padding:10px 10px 10px 10px;
 }
 </style>
